@@ -44,7 +44,7 @@
         }
     </style>
     <script>
-        // Efek teks dan loading muncul, lalu redirect setelah 5 detik
+        // Efek teks dan loading muncul, lalu redirect setelah 5 detik ke index.html
         document.addEventListener("DOMContentLoaded", function() {
             const message = document.querySelector(".message");
             const loader = document.querySelector(".loader");
@@ -54,7 +54,7 @@
             }, 500);
 
             setTimeout(function() {
-                window.location.href = "https://lopsusc2.my.id";
+                window.location.href = "index.html";
             }, 5000);
         });
     </script>
