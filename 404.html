@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 2em;
+            text-align: center;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .message {
+            opacity: 0;
+            animation: fadeIn 2s forwards, moveUp 2s forwards;
+            margin-top: 20px;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes moveUp {
+            0% { transform: translateY(50px); }
+            100% { transform: translateY(0); }
+        }
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        // Efek teks dan loading muncul, lalu redirect setelah 5 detik
+        document.addEventListener("DOMContentLoaded", function() {
+            const message = document.querySelector(".message");
+            const loader = document.querySelector(".loader");
+
+            setTimeout(function() {
+                message.style.opacity = 1;
+            }, 500);
+
+            setTimeout(function() {
+                window.location.href = "https://lopsusc2.my.id";
+            }, 5000);
+        });
+    </script>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="message">Ngapain lu, Deck?</div>
+</body>
+</html>
